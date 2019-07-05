@@ -39,7 +39,7 @@ void FacebookQml::login(QStringList permissions)
 		}
 	}
 
-    [static_cast<FBSDKLoginManager *>(_loginManager) logInWithReadPermissions:permissionsArray
+    [static_cast<FBSDKLoginManager *>(_loginManager) logInWithPermissions:permissionsArray
         fromViewController:[[UIApplication sharedApplication].keyWindow rootViewController]
         handler:^(FBSDKLoginManagerLoginResult *result, NSError *FBError) {
             if (FBError) {
