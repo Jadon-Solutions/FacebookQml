@@ -87,7 +87,7 @@ void FacebookQml::login(QStringList permissions)
         "getInstance",
         "()Lcom/facebook/login/LoginManager;"
     ).callMethod<void>(
-        "logInWithReadPermissions",
+        "logInWithPermissions",
         "(Landroid/app/Activity;Ljava/util/Collection;)V",
         QtAndroid::androidActivity().object<jobject>(),
         FacebookQmlUtils::stringListToArrayList(permissions).object<jobject>()
